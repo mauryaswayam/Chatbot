@@ -1,0 +1,148 @@
+/* Responsive CSS */
+
+.chat-container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.chat-header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  border-radius: 10px 10px 0 0;
+}
+
+.chat-conversation {
+  padding: 20px;
+}
+
+.message {
+  margin-bottom: 26px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #8bd5d6;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.username {
+  font-weight: bold;
+  color: #333;
+}
+
+.message-text {
+  color: #666;
+}
+
+.chat-input {
+  padding: 10px;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  border-radius: 0 0 10px 10px;
+}
+
+.chat-input input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.chat-input button[type="button"] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Animations */
+
+.chat-container {
+  transition: all 0.5s ease-in-out;
+}
+
+.chat-header {
+  transition: all 0.5s ease-in-out;
+}
+
+.chat-conversation {
+  transition: all 0.5s ease-in-out;
+}
+
+.message {
+  transition: all 0.5s ease-in-out;
+}
+
+.chat-input {
+  transition: all 0.5s ease-in-out;
+}
+
+.chat-input input[type="text"] {
+  transition: all 0.5s ease-in-out;
+}
+
+.chat-input button[type="button"] {
+  transition: all 0.5s ease-in-out;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+ .chat-container {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+ .chat-container {
+    max-width: 200px;
+  }
+ .chat-input input[type="text"] {
+    padding: 5px;
+  }
+ .chat-input button[type="button"] {
+    padding: 5px 10px;
+  }
+}
+
+/* Animation Keyframes */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+/* Add animation to message */
+
+.message {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.message-removed {
+  animation: fadeOut 0.5s ease-in-out;
+}
